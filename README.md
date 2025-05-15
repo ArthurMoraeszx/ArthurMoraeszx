@@ -98,3 +98,7 @@ Olá, me chamo Arthur Moraes, tenho 20 anos e sou de Recife/PE. Estou cursando C
   <img alt="github-snake" src="https://raw.githubusercontent.com/ArthurMoraeszx/ArthurMoraeszx/output/github-snake.svg" />
 </picture>
 
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=igorrxz&theme=tokyo-night&point=ffffff&line=00BFFF&hide_border=true" alt="Activity Graph"/>
+</p>
+
