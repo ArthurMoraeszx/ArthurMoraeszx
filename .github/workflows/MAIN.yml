@@ -3,7 +3,7 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 */6 * * *" # A cada 6 horas
+    - cron: "0 */6 * * *" # Executa a cada 6 horas
   workflow_dispatch:
 
 jobs:
@@ -22,8 +22,15 @@ jobs:
           gif_out_path: dist/github-contribution-grid-snake.gif
           svg_out_path: dist/github-contribution-grid-snake.svg
 
-      - name: Check git status
-        run: git status
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit changes
+        run: |
+          git add dist/
+          git commit -m "Atualiza animação Snake [GitHub Actions]" || echo "Nada para commitar"
 
       - name: Push changes to master
         uses: ad-m/github-push-action@master
