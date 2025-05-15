@@ -3,7 +3,7 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 */6 * * *" # Executa a cada 6 horas
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
@@ -11,36 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
-      - name: Generate Snake Animation
-        id: snake-gif
-        uses: Platane/snk@master
+      - uses: Platane/snk@v3
         with:
-          github_user_name: ArthurMoraeszx
-          gif_out_path: dist/github-contribution-grid-snake.gif
-          svg_out_path: dist/github-contribution-grid-snake.svg
-
-      - name: Configure Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Commit changes
-        run: |
-          git add dist/
-          git commit -m "Atualiza animação Snake [GitHub Actions]" || echo "Nada para commitar"
-
-      - name: Push changes to master
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
-          force: true
-
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2.1.3
+          github_user_name: igorrxz
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake.gif
+          
+      - uses: crazy-max/ghaction-github-pages@v2.1.3
         with:
           target_branch: output
           build_dir: dist
