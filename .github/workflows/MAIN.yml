@@ -21,15 +21,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Gera todas as animações (SVG claro, SVG dark, GIF customizado)
+      # Step 2: Gera as animações (SVG claro, SVG dark, GIF customizado)
       - name: Generate GitHub Contributions Snake Animations
-        uses: Platane/snk@master  # ou @v2, se preferir estabilidade
+        uses: Platane/snk@v3
         with:
           github_user_name: ArthurMoraeszx
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
-            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+          svg_out_path: dist/github-snake.svg
+          gif_out_path: dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -41,4 +39,3 @@ jobs:
           publish_dir: ./dist
           publish_branch: output
           commit_message: "Update snake animation [skip ci]"
-
