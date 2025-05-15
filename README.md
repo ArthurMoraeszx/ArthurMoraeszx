@@ -99,6 +99,6 @@ Olá, me chamo Arthur Moraes, tenho 20 anos e sou de Recife/PE. Estou cursando C
 </picture>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=igorrxz&theme=tokyo-night&point=ffffff&line=00BFFF&hide_border=true" alt="Activity Graph"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ArthurMoraeszx&theme=tokyo-night&point=ffffff&line=00BFFF&hide_border=true" alt="Activity Graph"/>
 </p>
 
