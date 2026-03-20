@@ -1,5 +1,5 @@
 # 👩🏻‍💻 Arthur Moraes
-**`Desenvolvedor back-end`**
+**`Desenvolvedor full-stack`**
 
 Olá, me chamo Arthur Moraes, tenho 20 anos e sou de Recife/PE. Estou cursando Ciência da Computação na UNIFBV e sou apaixonado em aprender novas linguagens e tornar ideias em projetos que transformem desafios em soluções eficientes e bem elaboradas.
 
